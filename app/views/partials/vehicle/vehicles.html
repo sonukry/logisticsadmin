@@ -1,0 +1,31 @@
+<section>
+  <!--a href="/new/vehicle" class="btn btn-primary">Add a vehicle</a-->
+  <h1>All Vehicles</h1>
+  <hr>
+  <div ng-repeat="f in fleets" ng-show="f.vehicles.length > 0">
+    <h3 id="{{f_.id}}">{{f.name}}</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+         <th>Registration Number</th>
+         <th>Make</th>
+         <th>Model</th>
+         <th>Type</th>
+         <th>Vehicle Identification Numbers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="v in f.vehicles" id="{{v._id}}">
+          <td>{{v.registrationNumber}}</td>
+          <td>{{v.make}}</td>
+          <td>{{v.model}}</td>
+          <td>{{v.type}}</td>
+          <td>
+            Engine Number - {{v.engineNumber}} <br> 
+            Chassis Number - {{v.chassisNumber}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

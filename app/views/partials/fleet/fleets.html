@@ -1,0 +1,37 @@
+<section>
+  <a href="/new/fleet" class="btn btn-primary">
+    <i class="glyphicon glyphicon-new-window"></i>
+    Create a fleet
+  </a>
+  <h1>All Fleets</h1>
+  <p ng-hide="fleets">Nothing here...</p>
+  <table ng-show="fleets" class="table table-hover">
+    <thead>
+      <tr>
+       <th>Name</th>
+       <th>Area</th>
+       <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="f in fleets">
+        <td>{{f.name}}</td>
+        <td>{{f.area}}</td>
+        <td>
+          <a href="/new/driver" ng-click="setFleet(f._id, f.name)" class="btn btn-info">
+            <i class="glyphicon glyphicon-user"></i>   
+            Add Driver
+          </a>
+          <a href="/new/vehicle" ng-click="setFleet(f._id, f.name)" class="btn btn-success">
+            <i class="glyphicon glyphicon-plane"></i>
+            Add Vehicle
+          </a>
+          <a href="/new/trip" ng-click="setFleet(f._id, f.name)" class="btn btn-warning">
+            <i class="glyphicon glyphicon-road"></i>
+            Schedule Trip
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

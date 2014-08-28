@@ -1,0 +1,69 @@
+<section>
+  <h1>New Vehicle</h1>
+  <hr>
+  <form class="form-horizontal" role="form" ng-submit="createVehicle()">
+   
+   <div class="form-group">
+      <label for="fleet" class="col-sm-2 control-label">Fleet</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" disabled value="{{currentFleetName}}">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="regno" class="col-sm-2 control-label">Registration Number</label>
+      <div class="col-sm-6">
+        <input ng-model="vehicle.registrationNumber" type="text" class="form-control" id="regno" placeholder="Registration Number" autofocus required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="" class="col-sm-2 control-label">Type</label>
+      <div class="col-sm-6">
+        <label class="radio-inline">
+          <input type="radio" ng-model="vehicle.type" name="inlineRadioOptions" id="inlineRadio1" value="SUV">SUV
+        </label>
+        <label class="radio-inline">
+          <input type="radio" ng-model="vehicle.type" name="inlineRadioOptions" id="inlineRadio2" value="MUV">MUV
+        </label>
+         <label class="radio-inline">
+          <input type="radio" ng-model="vehicle.type" name="inlineRadioOptions" id="inlineRadio3" value="LUV">LUV
+        </label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="make" class="col-sm-2 control-label">Make</label>
+      <div class="col-sm-6">
+        <input ng-model="vehicle.make" type="text" class="form-control" id="make" placeholder="Make" required>
+      </div>
+    </div>
+     <div class="form-group">
+      <label for="model" class="col-sm-2 control-label">Model</label>
+      <div class="col-sm-6">
+        <input ng-model="vehicle.model" type="text" class="form-control" id="model" placeholder="Model" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="engno" class="col-sm-2 control-label">Engine Number</label>
+      <div class="col-sm-6">
+        <input ng-model="vehicle.engineNumber" type="text" class="form-control" id="engno" placeholder="Engine Number" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="chno" class="col-sm-2 control-label">Chassis Number</label>
+      <div class="col-sm-6">
+        <input ng-model="vehicle.chassisNumber" type="text" class="form-control" id="chno" placeholder="Chassis Number" required>
+      </div>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-6">
+      <button type="submit" class="btn btn-info">Add Vehicle</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </div>
+</form>
+</section>

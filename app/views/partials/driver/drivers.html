@@ -1,0 +1,30 @@
+<section>
+  <!--a href="/new/driver" class="btn btn-primary">Add a driver</a-->
+  <h1>All Drivers</h1>
+  <hr>
+  <div ng-repeat="f in fleets" ng-show="f.drivers.length > 0">
+    <h3 id="{{f_.id}}">{{f.name}}</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+         <th>Name</th>
+         <th>Adress</th>
+         <th>Contact No.</th>
+         <th>License Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="d in f.drivers" id="{{d._id}}">
+          <td>{{d.name}}</td>
+          <td>{{d.addr}}</td>
+          <td>{{d.contact}}</td>
+          <td>
+            Number - {{d.license.number}} <br> 
+            Issue Date - {{d.license.issueDate}} <br>
+            Expiry Date - {{d.license.expiryDate}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

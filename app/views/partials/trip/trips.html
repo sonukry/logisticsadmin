@@ -1,0 +1,31 @@
+<section>
+  <h1>All Trips</h1>
+  <hr>
+  <div ng-repeat="f in fleets" ng-show="f.trips.length > 0">
+    <h3 id="{{f_.id}}">{{f.name}}</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+         <th>Summary</th>
+         <th>Starting Place</th>
+         <th>Destination</th>
+         <th>Vehicle</th>
+         <th>Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="t in f.trips">
+          <td>{{t.summary}}</td>
+          <td>{{t.startingPlace}}</td>
+          <td>{{t.destination}}</td>
+          <td>
+            <a href="/vehicles#{{t.vehicle._id}}">
+              {{t.vehicle.registrationNumber}}
+            </a>
+          </td>
+          <td><a href="/drivers#{{t.driver._id}}">{{t.driver.name}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
