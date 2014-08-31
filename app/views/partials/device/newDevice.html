@@ -1,0 +1,49 @@
+<section>
+   <h1>New Device</h1>
+   <hr>
+  <form class="form-horizontal" role="form" ng-submit="createDevice()">
+
+         <div class="form-group">
+      <label for="fleet" class="col-sm-2 control-label">Fleet</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" disabled value="{{currentFleetName}}">
+      </div>
+    </div>
+      
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">UUID</label>
+      <div class="col-sm-6">
+        <input ng-model="device.uuid" type="text" class="form-control" id="uuid" placeholder="UUID" autofocus required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="contact" class="col-sm-2 control-label">Manufacturer</label>
+      <div class="col-sm-6">
+        <input ng-model="device.manufacturer" type="text" class="form-control" id="contact" placeholder="Manufacturer" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="license-number" class="col-sm-2 control-label">Software Version</label>
+      <div class="col-sm-6">
+        <input ng-model="device.softwareVersion" type="text" class="form-control" id="license-number" placeholder="Software Version" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="issue-date" class="col-sm-2 control-label">Warranty</label>
+      <div class="col-sm-6">
+        <input ng-model="device.warranty" type="date" class="form-control" id="issue-date" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <button type="submit" class="btn btn-info">Add Device</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+      </div>
+    </div>
+
+  </form>
+</section>

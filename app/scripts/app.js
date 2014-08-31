@@ -32,6 +32,10 @@ angular.module('angularPassportApp', [
         templateUrl: 'partials/trip/trips.html',
         controller: 'TripsCtrl'
       })
+      .when('/devices', {
+        templateUrl: 'partials/device/devices.html',
+        controller: 'DevicesCtrl'
+      })
       .when('/new/fleet', {
         templateUrl: 'partials/fleet/newFleet.html',
         controller: 'NewFleetCtrl'
@@ -47,6 +51,10 @@ angular.module('angularPassportApp', [
       .when('/new/trip', {
         templateUrl: 'partials/trip/newTrip.html',
         controller: 'NewTripCtrl'
+      })
+      .when('/new/device', {
+        templateUrl: 'partials/device/newDevice.html',
+        controller: 'NewDeviceCtrl'
       })
       .when('/login', {
         templateUrl: 'partials/login.html',

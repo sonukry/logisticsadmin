@@ -19,6 +19,9 @@ angular.module('angularPassportApp')
     }, {
       "title": "Trips",
       "link": "trips"
+    }, {
+      "title": "Devices",
+      "link": "devices"
     }];
 
     $scope.logout = function() {
