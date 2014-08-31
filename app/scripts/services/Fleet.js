@@ -32,6 +32,10 @@ angular.module('angularPassportApp')
         var url = '/api/fleets/' + id + '/trips';
         return $http.post(url, data);
       },
+      addDevice: function(id, data) {
+        var url = '/api/fleets/' + id + '/devices';
+        return $http.post(url, data);
+      },
       getDrivers: function(id) {
         var url = '/api/fleets/' + id + '/drivers';
         return $http.get(url);
@@ -42,6 +46,10 @@ angular.module('angularPassportApp')
       },
       getTrips: function(id) {
         var url = '/api/fleets/' + id + '/trips';
+        return $http.get(url);
+      },
+      getDevices: function(id) {
+        var url = '/api/fleets/' + id + '/devices';
         return $http.get(url);
       }
     };
