@@ -8,6 +8,7 @@
       <thead>
         <tr>
          <th>Registration Number</th>
+         <th>Device</th>
          <th>Make</th>
          <th>Model</th>
          <th>Type</th>
@@ -17,6 +18,11 @@
       <tbody>
         <tr ng-repeat="v in f.vehicles" id="{{v._id}}">
           <td>{{v.registrationNumber}}</td>
+          <td>
+            <a href="/devices#{{v.device._id}}">
+              {{v.device.uuid}}
+            </a>
+          </td>
           <td>{{v.make}}</td>
           <td>{{v.model}}</td>
           <td>{{v.type}}</td>
