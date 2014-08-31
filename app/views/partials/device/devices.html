@@ -1,0 +1,25 @@
+<section>
+  <h1>All Devices</h1>
+  <hr>
+  <div ng-repeat="f in fleets" ng-show="f.devices.length > 0">
+    <h3 id="{{f_.id}}">{{f.name}}</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+         <th>UUID</th>
+         <th>Manufacturer</th>
+         <th>Warranty</th>
+         <th>Software Version</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="d in f.devices" id="{{d._id}}">
+          <td>{{d.uuid}}</td>
+          <td>{{d.manufacturer}}</td>
+          <td>{{d.warranty}}</td>
+          <td>{{d.softwareVersion}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
